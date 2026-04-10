@@ -46,7 +46,7 @@ bundle exec rspec
 
 - Uses `BigDecimal` for the tax calculation to avoid floating-point issues.
 - Includes simple validation for blank, non-numeric, and negative values.
-- Uses no database.
+- No database.
 - Includes service specs, model specs, and a request spec.
 
 ## Tax Bands
