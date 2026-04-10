@@ -29,5 +29,16 @@ RSpec.describe TaxCalculation do
 
       expect(calculation.tax_owed).to eq(BigDecimal("0"))
     end
+
+    it "can use a different set of tax bands" do
+      custom_bands = [
+        { up_to: BigDecimal("10000"), rate: BigDecimal("0.10") },
+        { up_to: nil, rate: BigDecimal("0.20") }
+      ]
+
+      calculation = described_class.new(income: "15000", bands: custom_bands)
+
+      expect(calculation.tax_owed).to eq(BigDecimal("2000"))
+    end
   end
 end

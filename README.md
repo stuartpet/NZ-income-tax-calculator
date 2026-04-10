@@ -39,8 +39,8 @@ bundle exec rspec
 
 - accepts an annual income in NZD
 - validates the input
-- calculates tax progressively across the 2025 NZ income tax bands
-- renders the calculated tax on the same page
+- calculates tax across the 2025 NZ income tax bands
+- renders the calculated tax
 
 ## Implementation Notes
 
@@ -70,7 +70,6 @@ bundle exec rspec
 
 - The input is annual taxable income in NZD.
 - The calculator only applies the tax bands from the brief.
-- It does not include other deductions or adjustments.
 
 ## Source
 
